@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6CB2D2B91AFFB94D00AB0E60 /* words.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6CB2D2B81AFFB94D00AB0E60 /* words.txt */; };
+		6CB2D2BA1AFFB94D00AB0E60 /* words.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6CB2D2B81AFFB94D00AB0E60 /* words.txt */; };
+		6CB2D2BC1AFFBB0C00AB0E60 /* StreamReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB2D2BB1AFFBB0C00AB0E60 /* StreamReader.swift */; };
+		6CB2D2BD1AFFBB0C00AB0E60 /* StreamReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB2D2BB1AFFBB0C00AB0E60 /* StreamReader.swift */; };
 		6CC2B4131AFFA4C900224C44 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC2B4121AFFA4C900224C44 /* AppDelegate.swift */; };
 		6CC2B4151AFFA4C900224C44 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC2B4141AFFA4C900224C44 /* ViewController.swift */; };
 		6CC2B4181AFFA4C900224C44 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6CC2B4161AFFA4C900224C44 /* Main.storyboard */; };
@@ -19,6 +23,8 @@
 		6CC2B4491AFFA51300224C44 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6CC2B4471AFFA51300224C44 /* Interface.storyboard */; };
 		6CC2B44B1AFFA51300224C44 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6CC2B44A1AFFA51300224C44 /* Images.xcassets */; };
 		6CC2B44E1AFFA51300224C44 /* T9 WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 6CC2B4361AFFA51300224C44 /* T9 WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		6CC2B4571AFFAA7D00224C44 /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC2B4561AFFAA7D00224C44 /* Node.swift */; };
+		6CC2B4581AFFAA7D00224C44 /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC2B4561AFFAA7D00224C44 /* Node.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +66,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		6CB2D2B81AFFB94D00AB0E60 /* words.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = words.txt; sourceTree = "<group>"; };
+		6CB2D2BB1AFFBB0C00AB0E60 /* StreamReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamReader.swift; sourceTree = "<group>"; };
 		6CC2B40D1AFFA4C900224C44 /* T9.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = T9.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6CC2B4111AFFA4C900224C44 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6CC2B4121AFFA4C900224C44 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +86,7 @@
 		6CC2B4461AFFA51300224C44 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6CC2B4481AFFA51300224C44 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		6CC2B44A1AFFA51300224C44 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		6CC2B4561AFFAA7D00224C44 /* Node.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,9 +114,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6CB2D2B71AFFB94100AB0E60 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				6CB2D2B81AFFB94D00AB0E60 /* words.txt */,
+				6CB2D2BB1AFFBB0C00AB0E60 /* StreamReader.swift */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		6CC2B4041AFFA4C800224C44 = {
 			isa = PBXGroup;
 			children = (
+				6CB2D2B71AFFB94100AB0E60 /* Resources */,
 				6CC2B40F1AFFA4C900224C44 /* T9 */,
 				6CC2B4251AFFA4C900224C44 /* T9Tests */,
 				6CC2B4371AFFA51300224C44 /* T9 WatchKit Extension */,
@@ -130,6 +149,7 @@
 		6CC2B40F1AFFA4C900224C44 /* T9 */ = {
 			isa = PBXGroup;
 			children = (
+				6CC2B4561AFFAA7D00224C44 /* Node.swift */,
 				6CC2B4121AFFA4C900224C44 /* AppDelegate.swift */,
 				6CC2B4141AFFA4C900224C44 /* ViewController.swift */,
 				6CC2B4161AFFA4C900224C44 /* Main.storyboard */,
@@ -326,6 +346,7 @@
 			files = (
 				6CC2B4181AFFA4C900224C44 /* Main.storyboard in Resources */,
 				6CC2B41D1AFFA4C900224C44 /* LaunchScreen.xib in Resources */,
+				6CB2D2B91AFFB94D00AB0E60 /* words.txt in Resources */,
 				6CC2B41A1AFFA4C900224C44 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -342,6 +363,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6CC2B43D1AFFA51300224C44 /* Images.xcassets in Resources */,
+				6CB2D2BA1AFFB94D00AB0E60 /* words.txt in Resources */,
 				6CC2B4411AFFA51300224C44 /* T9 WatchKit App.app in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -362,6 +384,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6CB2D2BC1AFFBB0C00AB0E60 /* StreamReader.swift in Sources */,
+				6CC2B4571AFFAA7D00224C44 /* Node.swift in Sources */,
 				6CC2B4151AFFA4C900224C44 /* ViewController.swift in Sources */,
 				6CC2B4131AFFA4C900224C44 /* AppDelegate.swift in Sources */,
 			);
@@ -379,7 +403,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6CB2D2BD1AFFBB0C00AB0E60 /* StreamReader.swift in Sources */,
 				6CC2B43B1AFFA51300224C44 /* InterfaceController.swift in Sources */,
+				6CC2B4581AFFAA7D00224C44 /* Node.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -572,6 +598,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -579,8 +606,10 @@
 				IBSC_MODULE = T9_WatchKit_Extension;
 				INFOPLIST_FILE = "T9 WatchKit App/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = 4;
 				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
 			};
@@ -590,9 +619,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				IBSC_MODULE = T9_WatchKit_Extension;
 				INFOPLIST_FILE = "T9 WatchKit App/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
@@ -643,6 +674,7 @@
 				6CC2B42E1AFFA4C900224C44 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6CC2B42F1AFFA4C900224C44 /* Build configuration list for PBXNativeTarget "T9Tests" */ = {
 			isa = XCConfigurationList;
@@ -651,6 +683,7 @@
 				6CC2B4311AFFA4C900224C44 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6CC2B44F1AFFA51300224C44 /* Build configuration list for PBXNativeTarget "T9 WatchKit App" */ = {
 			isa = XCConfigurationList;
@@ -659,6 +692,7 @@
 				6CC2B4511AFFA51300224C44 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6CC2B4521AFFA51300224C44 /* Build configuration list for PBXNativeTarget "T9 WatchKit Extension" */ = {
 			isa = XCConfigurationList;
@@ -667,6 +701,7 @@
 				6CC2B4541AFFA51300224C44 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
