@@ -13,6 +13,12 @@
 		6CC2B41A1AFFA4C900224C44 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6CC2B4191AFFA4C900224C44 /* Images.xcassets */; };
 		6CC2B41D1AFFA4C900224C44 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6CC2B41B1AFFA4C900224C44 /* LaunchScreen.xib */; };
 		6CC2B4291AFFA4C900224C44 /* T9Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC2B4281AFFA4C900224C44 /* T9Tests.swift */; };
+		6CC2B43B1AFFA51300224C44 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC2B43A1AFFA51300224C44 /* InterfaceController.swift */; };
+		6CC2B43D1AFFA51300224C44 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6CC2B43C1AFFA51300224C44 /* Images.xcassets */; };
+		6CC2B4411AFFA51300224C44 /* T9 WatchKit App.app in Resources */ = {isa = PBXBuildFile; fileRef = 6CC2B4401AFFA51300224C44 /* T9 WatchKit App.app */; };
+		6CC2B4491AFFA51300224C44 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6CC2B4471AFFA51300224C44 /* Interface.storyboard */; };
+		6CC2B44B1AFFA51300224C44 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6CC2B44A1AFFA51300224C44 /* Images.xcassets */; };
+		6CC2B44E1AFFA51300224C44 /* T9 WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 6CC2B4361AFFA51300224C44 /* T9 WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -23,7 +29,35 @@
 			remoteGlobalIDString = 6CC2B40C1AFFA4C900224C44;
 			remoteInfo = T9;
 		};
+		6CC2B4421AFFA51300224C44 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6CC2B4051AFFA4C800224C44 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6CC2B43F1AFFA51300224C44;
+			remoteInfo = "T9 WatchKit App";
+		};
+		6CC2B44C1AFFA51300224C44 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6CC2B4051AFFA4C800224C44 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6CC2B4351AFFA51300224C44;
+			remoteInfo = "T9 WatchKit Extension";
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		6CC2B4551AFFA51300224C44 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				6CC2B44E1AFFA51300224C44 /* T9 WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		6CC2B40D1AFFA4C900224C44 /* T9.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = T9.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -36,6 +70,14 @@
 		6CC2B4221AFFA4C900224C44 /* T9Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = T9Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6CC2B4271AFFA4C900224C44 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6CC2B4281AFFA4C900224C44 /* T9Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = T9Tests.swift; sourceTree = "<group>"; };
+		6CC2B4361AFFA51300224C44 /* T9 WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "T9 WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6CC2B4391AFFA51300224C44 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6CC2B43A1AFFA51300224C44 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		6CC2B43C1AFFA51300224C44 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		6CC2B4401AFFA51300224C44 /* T9 WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "T9 WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6CC2B4461AFFA51300224C44 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6CC2B4481AFFA51300224C44 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		6CC2B44A1AFFA51300224C44 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +95,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		6CC2B4331AFFA51300224C44 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -61,6 +110,8 @@
 			children = (
 				6CC2B40F1AFFA4C900224C44 /* T9 */,
 				6CC2B4251AFFA4C900224C44 /* T9Tests */,
+				6CC2B4371AFFA51300224C44 /* T9 WatchKit Extension */,
+				6CC2B4441AFFA51300224C44 /* T9 WatchKit App */,
 				6CC2B40E1AFFA4C900224C44 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -70,6 +121,8 @@
 			children = (
 				6CC2B40D1AFFA4C900224C44 /* T9.app */,
 				6CC2B4221AFFA4C900224C44 /* T9Tests.xctest */,
+				6CC2B4361AFFA51300224C44 /* T9 WatchKit Extension.appex */,
+				6CC2B4401AFFA51300224C44 /* T9 WatchKit App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -112,6 +165,42 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		6CC2B4371AFFA51300224C44 /* T9 WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				6CC2B43A1AFFA51300224C44 /* InterfaceController.swift */,
+				6CC2B43C1AFFA51300224C44 /* Images.xcassets */,
+				6CC2B4381AFFA51300224C44 /* Supporting Files */,
+			);
+			path = "T9 WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		6CC2B4381AFFA51300224C44 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6CC2B4391AFFA51300224C44 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6CC2B4441AFFA51300224C44 /* T9 WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				6CC2B4471AFFA51300224C44 /* Interface.storyboard */,
+				6CC2B44A1AFFA51300224C44 /* Images.xcassets */,
+				6CC2B4451AFFA51300224C44 /* Supporting Files */,
+			);
+			path = "T9 WatchKit App";
+			sourceTree = "<group>";
+		};
+		6CC2B4451AFFA51300224C44 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6CC2B4461AFFA51300224C44 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -122,10 +211,12 @@
 				6CC2B4091AFFA4C900224C44 /* Sources */,
 				6CC2B40A1AFFA4C900224C44 /* Frameworks */,
 				6CC2B40B1AFFA4C900224C44 /* Resources */,
+				6CC2B4551AFFA51300224C44 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				6CC2B44D1AFFA51300224C44 /* PBXTargetDependency */,
 			);
 			name = T9;
 			productName = T9;
@@ -150,6 +241,39 @@
 			productReference = 6CC2B4221AFFA4C900224C44 /* T9Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		6CC2B4351AFFA51300224C44 /* T9 WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6CC2B4521AFFA51300224C44 /* Build configuration list for PBXNativeTarget "T9 WatchKit Extension" */;
+			buildPhases = (
+				6CC2B4321AFFA51300224C44 /* Sources */,
+				6CC2B4331AFFA51300224C44 /* Frameworks */,
+				6CC2B4341AFFA51300224C44 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6CC2B4431AFFA51300224C44 /* PBXTargetDependency */,
+			);
+			name = "T9 WatchKit Extension";
+			productName = "T9 WatchKit Extension";
+			productReference = 6CC2B4361AFFA51300224C44 /* T9 WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit-extension";
+		};
+		6CC2B43F1AFFA51300224C44 /* T9 WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6CC2B44F1AFFA51300224C44 /* Build configuration list for PBXNativeTarget "T9 WatchKit App" */;
+			buildPhases = (
+				6CC2B43E1AFFA51300224C44 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "T9 WatchKit App";
+			productName = "T9 WatchKit App";
+			productReference = 6CC2B4401AFFA51300224C44 /* T9 WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -165,6 +289,12 @@
 					6CC2B4211AFFA4C900224C44 = {
 						CreatedOnToolsVersion = 6.3.1;
 						TestTargetID = 6CC2B40C1AFFA4C900224C44;
+					};
+					6CC2B4351AFFA51300224C44 = {
+						CreatedOnToolsVersion = 6.3.1;
+					};
+					6CC2B43F1AFFA51300224C44 = {
+						CreatedOnToolsVersion = 6.3.1;
 					};
 				};
 			};
@@ -183,6 +313,8 @@
 			targets = (
 				6CC2B40C1AFFA4C900224C44 /* T9 */,
 				6CC2B4211AFFA4C900224C44 /* T9Tests */,
+				6CC2B4351AFFA51300224C44 /* T9 WatchKit Extension */,
+				6CC2B43F1AFFA51300224C44 /* T9 WatchKit App */,
 			);
 		};
 /* End PBXProject section */
@@ -202,6 +334,24 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6CC2B4341AFFA51300224C44 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6CC2B43D1AFFA51300224C44 /* Images.xcassets in Resources */,
+				6CC2B4411AFFA51300224C44 /* T9 WatchKit App.app in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6CC2B43E1AFFA51300224C44 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6CC2B4491AFFA51300224C44 /* Interface.storyboard in Resources */,
+				6CC2B44B1AFFA51300224C44 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -225,6 +375,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		6CC2B4321AFFA51300224C44 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6CC2B43B1AFFA51300224C44 /* InterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -232,6 +390,16 @@
 			isa = PBXTargetDependency;
 			target = 6CC2B40C1AFFA4C900224C44 /* T9 */;
 			targetProxy = 6CC2B4231AFFA4C900224C44 /* PBXContainerItemProxy */;
+		};
+		6CC2B4431AFFA51300224C44 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6CC2B43F1AFFA51300224C44 /* T9 WatchKit App */;
+			targetProxy = 6CC2B4421AFFA51300224C44 /* PBXContainerItemProxy */;
+		};
+		6CC2B44D1AFFA51300224C44 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6CC2B4351AFFA51300224C44 /* T9 WatchKit Extension */;
+			targetProxy = 6CC2B44C1AFFA51300224C44 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -250,6 +418,14 @@
 				6CC2B41C1AFFA4C900224C44 /* Base */,
 			);
 			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		6CC2B4471AFFA51300224C44 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6CC2B4481AFFA51300224C44 /* Base */,
+			);
+			name = Interface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -392,6 +568,62 @@
 			};
 			name = Release;
 		};
+		6CC2B4501AFFA51300224C44 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				IBSC_MODULE = T9_WatchKit_Extension;
+				INFOPLIST_FILE = "T9 WatchKit App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Debug;
+		};
+		6CC2B4511AFFA51300224C44 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				IBSC_MODULE = T9_WatchKit_Extension;
+				INFOPLIST_FILE = "T9 WatchKit App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Release;
+		};
+		6CC2B4531AFFA51300224C44 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "T9 WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		6CC2B4541AFFA51300224C44 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "T9 WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -417,6 +649,22 @@
 			buildConfigurations = (
 				6CC2B4301AFFA4C900224C44 /* Debug */,
 				6CC2B4311AFFA4C900224C44 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		6CC2B44F1AFFA51300224C44 /* Build configuration list for PBXNativeTarget "T9 WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6CC2B4501AFFA51300224C44 /* Debug */,
+				6CC2B4511AFFA51300224C44 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		6CC2B4521AFFA51300224C44 /* Build configuration list for PBXNativeTarget "T9 WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6CC2B4531AFFA51300224C44 /* Debug */,
+				6CC2B4541AFFA51300224C44 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
