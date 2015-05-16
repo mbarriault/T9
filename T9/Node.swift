@@ -14,7 +14,17 @@ class Node {
     var nodes = [Node?]()
     weak var parent: Node? = nil
     
-    static var RootNode = Node(letters: 0)
+    class func MakeRootNode() -> Node {
+        let node = Node(letters: 0)
+        let wordsfile = NSBundle.mainBundle().pathForResource("words", ofType: "txt")
+        let reader = StreamReader(path: wordsfile!, delimiter: "\n")
+        while let word = reader?.nextLine() {
+            node.addWord(word)
+        }
+        return node
+    }
+    
+    static let RootNode = Node.MakeRootNode()
     
     init(letters: Int) {
         self.letters = letters
@@ -70,6 +80,33 @@ class Node {
         return desc
     }
     
+    func getTemplate(typed: [Int]) -> String {
+        var txt = ""
+        for type in typed {
+            switch type {
+            case 2:
+                txt += "a"
+            case 3:
+                txt += "d"
+            case 4:
+                txt += "g"
+            case 5:
+                txt += "j"
+            case 6:
+                txt += "m"
+            case 7:
+                txt += "p"
+            case 8:
+                txt += "t"
+            case 9:
+                txt += "w"
+            default:
+                txt += " "
+            }
+        }
+        return txt
+    }
+    
     func getWords(typed: [Int]) -> [String] {
         if typed.count == 0 {
             if self.words.count > 0 {
@@ -92,18 +129,20 @@ class Node {
                 }
             }
         }
-        else if typed[0] >= 0 && typed[0] < 8 && self.nodes[typed[0]] != nil {
-            let node = self.nodes[typed[0]]!
-            if typed.count == 1 {
-                return node.getWords([])
+        else {
+            let key = typed[0] - 2
+            if let node = self.nodes[key] {
+                if typed.count == 1 {
+                    return node.getWords([])
+                }
+                else {
+                    let typeSlice = typed[1..<typed.count];
+                    return node.getWords(Array(typeSlice))
+                }
             }
             else {
-                let typeSlice = typed[1..<typed.count];
-                return node.getWords(Array(typeSlice))
+                return []
             }
-        }
-        else {
-            return []
         }
     }
     

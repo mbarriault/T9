@@ -16,13 +16,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch
-        let node = Node.RootNode
-        let wordsfile = NSBundle.mainBundle().pathForResource("words", ofType: "txt")
-        let reader = StreamReader(path: wordsfile!, delimiter: "\n")
-        while let word = reader?.nextLine() {
-            node.addWord(word)
-        }
-        println(node.getWords([0,0,5]))
         return true
     }
 

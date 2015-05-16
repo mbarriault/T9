@@ -14,9 +14,9 @@
                             <items>
                                 <group width="1" height="0.20000000000000001" alignment="left" id="0ge-2F-HEe">
                                     <items>
-                                        <button height="1" alignment="left" verticalAlignment="center" title="&lt;" id="ZtG-gt-jvu"/>
-                                        <label height="1" alignment="center" text="Label" textAlignment="center" id="Vog-Rq-o24"/>
-                                        <button height="1" alignment="right" verticalAlignment="center" title="&gt;" id="PC9-uy-2bx"/>
+                                        <label width="1" height="1" alignment="center" verticalAlignment="bottom" textAlignment="left" numberOfLines="2" id="Vog-Rq-o24">
+                                            <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                                        </label>
                                     </items>
                                 </group>
                                 <group width="1" height="0.80000000000000004" alignment="center" verticalAlignment="bottom" id="cSc-px-KUq">
@@ -24,34 +24,67 @@
                                         <group width="0.33300000000000002" height="1" alignment="center" verticalAlignment="center" layout="vertical" id="5QN-zo-vUe">
                                             <items>
                                                 <button width="1" height="0.25" alignment="center" verticalAlignment="center" title="!" id="skh-Tk-yYI"/>
-                                                <button width="1" height="0.25" alignment="center" verticalAlignment="center" title="GHI" id="8Ah-ct-54A"/>
+                                                <button width="1" height="0.25" alignment="center" verticalAlignment="center" title="GHI" id="8Ah-ct-54A">
+                                                    <connections>
+                                                        <action selector="ghi" destination="AgC-eL-Hgc" id="ww3-cm-7hO"/>
+                                                    </connections>
+                                                </button>
                                                 <button width="1" height="0.25" alignment="center" verticalAlignment="center" title="PQRS" id="3yH-iL-SQP">
                                                     <fontDescription key="font" type="system" pointSize="15"/>
                                                     <variation key="device=watch38mm">
                                                         <fontDescription key="font" type="system" pointSize="12"/>
                                                     </variation>
+                                                    <connections>
+                                                        <action selector="pqrs" destination="AgC-eL-Hgc" id="gyV-QU-LFM"/>
+                                                    </connections>
                                                 </button>
-                                                <button width="1" height="0.25" alignment="center" verticalAlignment="center" title="⏎" id="mnP-GZ-yAB"/>
+                                                <button width="1" height="0.25" alignment="center" verticalAlignment="center" title="⏎" id="mnP-GZ-yAB">
+                                                    <connections>
+                                                        <action selector="cycle" destination="AgC-eL-Hgc" id="8uA-7a-9yc"/>
+                                                    </connections>
+                                                </button>
                                             </items>
                                         </group>
                                         <group width="0.33300000000000002" height="1" alignment="center" verticalAlignment="center" layout="vertical" id="E0W-3t-EUo">
                                             <items>
-                                                <button width="1" height="0.25" alignment="center" verticalAlignment="center" title="ABC" id="H6r-88-MeB"/>
-                                                <button width="1" height="0.25" alignment="center" verticalAlignment="center" title="JKL" id="i1g-cP-HCW"/>
+                                                <button width="1" height="0.25" alignment="center" verticalAlignment="center" title="ABC" id="H6r-88-MeB">
+                                                    <connections>
+                                                        <action selector="abc" destination="AgC-eL-Hgc" id="p7l-pb-gMf"/>
+                                                    </connections>
+                                                </button>
+                                                <button width="1" height="0.25" alignment="center" verticalAlignment="center" title="JKL" id="i1g-cP-HCW">
+                                                    <connections>
+                                                        <action selector="jkl" destination="AgC-eL-Hgc" id="Iof-Hy-ek0"/>
+                                                    </connections>
+                                                </button>
                                                 <button width="1" height="0.25" alignment="center" verticalAlignment="center" title="TUV" id="cAS-hR-mNl">
                                                     <fontDescription key="font" type="system" pointSize="15"/>
+                                                    <connections>
+                                                        <action selector="tuv" destination="AgC-eL-Hgc" id="eEd-U3-mhB"/>
+                                                    </connections>
                                                 </button>
-                                                <button width="1" height="0.25" alignment="center" verticalAlignment="center" title="_" id="B66-vx-bL8"/>
+                                                <button width="1" height="0.25" alignment="center" verticalAlignment="center" title="_" id="B66-vx-bL8">
+                                                    <connections>
+                                                        <action selector="space" destination="AgC-eL-Hgc" id="S4u-2b-3ol"/>
+                                                    </connections>
+                                                </button>
                                             </items>
                                         </group>
                                         <group width="0.33300000000000002" height="1" alignment="center" verticalAlignment="center" layout="vertical" id="5bq-uF-3XV">
                                             <items>
-                                                <button width="1" height="0.25" alignment="center" verticalAlignment="center" title="DEF" id="A8W-ll-lMy"/>
+                                                <button width="1" height="0.25" alignment="center" verticalAlignment="center" title="DEF" id="A8W-ll-lMy">
+                                                    <connections>
+                                                        <action selector="def" destination="AgC-eL-Hgc" id="yvf-8p-5uD"/>
+                                                    </connections>
+                                                </button>
                                                 <button width="1" height="0.25" alignment="center" verticalAlignment="center" title="MNO" id="Rak-F0-Dmn">
                                                     <fontDescription key="font" type="system" pointSize="15"/>
                                                     <variation key="device=watch38mm">
                                                         <fontDescription key="font" type="system" pointSize="14"/>
                                                     </variation>
+                                                    <connections>
+                                                        <action selector="mno" destination="AgC-eL-Hgc" id="Ngs-67-oqa"/>
+                                                    </connections>
                                                 </button>
                                                 <button width="1" height="0.25" alignment="center" verticalAlignment="center" title="WXYZ" id="6Cc-HE-YdM">
                                                     <fontDescription key="font" type="system" pointSize="15"/>
@@ -61,9 +94,15 @@
                                                     <variation key="device=watch42mm">
                                                         <fontDescription key="font" type="system" pointSize="14"/>
                                                     </variation>
+                                                    <connections>
+                                                        <action selector="wxyz" destination="AgC-eL-Hgc" id="daA-8f-8K3"/>
+                                                    </connections>
                                                 </button>
                                                 <button width="1" height="0.25" alignment="center" verticalAlignment="center" title="⌫" id="WIc-V2-Z87">
                                                     <fontDescription key="font" type="system" pointSize="15"/>
+                                                    <connections>
+                                                        <action selector="backspace" destination="AgC-eL-Hgc" id="j0O-wo-v1d"/>
+                                                    </connections>
                                                 </button>
                                             </items>
                                         </group>
@@ -72,8 +111,13 @@
                             </items>
                         </group>
                     </items>
+                    <connections>
+                        <outlet property="cycleButton" destination="mnP-GZ-yAB" id="bLX-r0-vhM"/>
+                        <outlet property="label" destination="Vog-Rq-o24" id="xz0-Fd-U6e"/>
+                    </connections>
                 </controller>
             </objects>
+            <point key="canvasLocation" x="251" y="281"/>
         </scene>
     </scenes>
 </document>
