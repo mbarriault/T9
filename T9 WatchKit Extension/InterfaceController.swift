@@ -18,36 +18,23 @@ class InterfaceController: WKInterfaceController {
     var curWordIdx: Int = 0
     var symbolIdx: Int = -1
     var availWords = [String]()
+    var capitalise: Bool = false
     static let Symbols = ["!", "?", ",", "(", ")", "&", "$", "£", "-"]
 
     @IBOutlet weak var label: WKInterfaceLabel!
     @IBOutlet weak var cycleButton: WKInterfaceButton!
-    
-    override func awakeWithContext(context: AnyObject?) {
-        super.awakeWithContext(context)
-
-        // Configure interface objects here.
-    }
-
-    override func willActivate() {
-        // This method is called when watch view controller is about to be visible to user
-        super.willActivate()
-    }
-
-    override func didDeactivate() {
-        // This method is called when watch view controller is no longer visible
-        super.didDeactivate()
-    }
     
     func updateWord() {
         self.resetCurrent()
         self.availWords = node.getWords(typed)
         if availWords.count > 0 {
             curWord = availWords[curWordIdx]
-            self.cycleButton.setTitle("\(self.curWordIdx+1)/\(self.availWords.count)")
         }
         else {
             curWord = node.getTemplate(typed)
+        }
+        if self.capitalise {
+            curWord = curWord?.capitalizedString
         }
         self.updateLabel()
     }
@@ -70,6 +57,7 @@ class InterfaceController: WKInterfaceController {
         } else {
             self.label.setText(txt)
         }
+        self.updateCycleButton()
     }
 
     @IBAction func backspace() {
@@ -77,14 +65,22 @@ class InterfaceController: WKInterfaceController {
         self.updateWord()
     }
     
+    func updateCycleButton() {
+        if self.availWords.count > 0 {
+            self.cycleButton.setTitle("\(self.curWordIdx+1)/\(self.availWords.count)")
+        } else if self.curWord != nil || self.symbolIdx >= 0 {
+            self.cycleButton.setTitle("")
+        } else {
+            self.cycleButton.setTitle("⇪")
+        }
+    }
+    
     @IBAction func cycle() {
         if self.availWords.count > 0 {
             self.curWordIdx = (self.curWordIdx + 1) % self.availWords.count
             self.curWord = self.availWords[self.curWordIdx]
-            self.cycleButton.setTitle("\(self.curWordIdx+1)/\(self.availWords.count)")
-        }
-        else {
-            self.cycleButton.setTitle("")
+        } else {
+            self.capitalise = !self.capitalise
         }
         self.updateLabel()
     }
@@ -93,6 +89,7 @@ class InterfaceController: WKInterfaceController {
         if let curWord = self.curWord {
             self.words.append(curWord)
             self.resetCurrent()
+            self.capitalise = false
             self.availWords = [String]()
             self.typed = [Int]()
         }
@@ -102,12 +99,17 @@ class InterfaceController: WKInterfaceController {
         if let curWord = self.curWord {
             self.addWord()
         } else if var last = words.last {
-            if self.symbolIdx < 0 {
-                last += "."
-            } else {
-                last += InterfaceController.Symbols[self.symbolIdx]
+            var sym = "."
+            if self.symbolIdx >= 0 {
+                sym = InterfaceController.Symbols[self.symbolIdx]
                 self.symbolIdx = -1
             }
+            if contains([".", "!", "?"], sym) {
+                self.capitalise = true
+            } else {
+                self.capitalise = false
+            }
+            last += sym
             self.words[self.words.count-1] = last
         }
         self.updateLabel()

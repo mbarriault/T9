@@ -42,7 +42,7 @@
                                                         <action selector="pqrs" destination="AgC-eL-Hgc" id="gyV-QU-LFM"/>
                                                     </connections>
                                                 </button>
-                                                <button width="1" height="0.25" alignment="center" verticalAlignment="center" title="⏎" id="mnP-GZ-yAB">
+                                                <button width="1" height="0.25" alignment="center" verticalAlignment="center" title="⇪" id="mnP-GZ-yAB">
                                                     <connections>
                                                         <action selector="cycle" destination="AgC-eL-Hgc" id="8uA-7a-9yc"/>
                                                     </connections>
