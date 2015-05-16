@@ -8,18 +8,26 @@
 
 import Foundation
 
-class Node {
+class Node: NSObject, NSCoding {
     var words = [String]()
     var letters: Int = 0
     var nodes = [Int:Node]()
     weak var parent: Node? = nil
     
     class func MakeRootNode() -> Node {
-        let node = Node(letters: 0)
-        let wordsfile = NSBundle.mainBundle().pathForResource("words", ofType: "txt")
-        let reader = StreamReader(path: wordsfile!, delimiter: "\n")
-        while let word = reader?.nextLine() {
-            node.addWord(word)
+        var node = Node(letters: 0)
+        let docDir = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as! String
+        let wordsDictFile = docDir.stringByAppendingPathComponent("words.plist")
+        let validation = NSFileManager.defaultManager()
+        if validation.fileExistsAtPath(wordsDictFile) {
+            node = NSKeyedUnarchiver.unarchiveObjectWithFile(wordsDictFile) as! Node
+        } else {
+            let wordsfile = NSBundle.mainBundle().pathForResource("words", ofType: "txt")
+            let reader = StreamReader(path: wordsfile!, delimiter: "\n")
+            while let word = reader?.nextLine() {
+                node.addWord(word)
+            }
+            NSKeyedArchiver.archiveRootObject(node, toFile: wordsDictFile)
         }
         return node
     }
@@ -28,7 +36,22 @@ class Node {
     
     init(letters: Int) {
         self.letters = letters
-        self.nodes = [Node?](count: 8, repeatedValue: nil)
+    }
+    
+    required init(coder aDecoder: NSCoder) {
+        super.init()
+        self.words = aDecoder.decodeObjectForKey("words") as! [String]
+        self.letters = aDecoder.decodeObjectForKey("letters") as! Int
+        self.nodes = aDecoder.decodeObjectForKey("nodes") as! [Int:Node]
+        for node in self.nodes {
+            node.1.parent = self
+        }
+    }
+    
+    func encodeWithCoder(aCoder: NSCoder) {
+        aCoder.encodeObject(self.words, forKey: "words")
+        aCoder.encodeObject(self.letters, forKey: "letters")
+        aCoder.encodeObject(self.nodes, forKey: "nodes")
     }
     
     convenience init(letters: Int, parent: Node) {
@@ -67,7 +90,7 @@ class Node {
         }
     }
     
-    var description: String {
+    override var description: String {
         var desc: String = ""
         if self.words.count > 0 {
             desc += "\(self.words)"
