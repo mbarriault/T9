@@ -11,7 +11,7 @@ import Foundation
 class Node {
     var words = [String]()
     var letters: Int = 0
-    var nodes = [Node?]()
+    var nodes = [Int:Node]()
     weak var parent: Node? = nil
     
     class func MakeRootNode() -> Node {
@@ -73,9 +73,7 @@ class Node {
             desc += "\(self.words)"
         }
         for node in self.nodes {
-            if node != nil {
-                desc += "\(node!.description)"
-            }
+            desc += "\(node.0): \(node.1.description)"
         }
         return desc
     }
@@ -113,16 +111,8 @@ class Node {
                 return self.words
             }
             else {
-                var nilnodecount: Int = 0
-                var onlyNode: Node? = nil
-                for node in self.nodes {
-                    if node != nil {
-                        ++nilnodecount
-                        onlyNode = node
-                    }
-                }
-                if nilnodecount == 1 {
-                    return onlyNode!.getWords([])
+                if self.nodes.count == 1 {
+                    return self.nodes.values.first!.getWords([])
                 }
                 else {
                     return []
