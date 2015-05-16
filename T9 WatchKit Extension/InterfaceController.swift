@@ -50,14 +50,7 @@ class InterfaceController: WKInterfaceController {
         self.updateLabel()
     }
     
-    func updateLabel() {
-        var sidx = words.count-8
-        if self.curWord != nil {
-            ++sidx
-        }
-        if sidx < 0 {
-            sidx = 0
-        }
+    func updateLabel(sidx: Int = 0) {
         var labelWords = [String]()
         if sidx > 0 {
             labelWords.append("...")
@@ -66,7 +59,12 @@ class InterfaceController: WKInterfaceController {
         if let curWord = self.curWord {
             labelWords.append(curWord)
         }
-        self.label.setText(String(" ").join(labelWords))
+        var txt = String(" ").join(labelWords)
+        if count(txt) > 40 {
+            self.updateLabel(sidx: sidx+1)
+        } else {
+            self.label.setText(txt)
+        }
     }
 
     @IBAction func backspace() {
