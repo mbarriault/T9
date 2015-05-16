@@ -16,7 +16,9 @@ class InterfaceController: WKInterfaceController {
     var words = [String]()
     var curWord: String? = nil
     var curWordIdx: Int = 0
+    var symbolIdx: Int = -1
     var availWords = [String]()
+    static let Symbols = ["!", "?", ",", "(", ")", "&", "$", "£", "-"]
 
     @IBOutlet weak var label: WKInterfaceLabel!
     @IBOutlet weak var cycleButton: WKInterfaceButton!
@@ -56,10 +58,13 @@ class InterfaceController: WKInterfaceController {
             labelWords.append("...")
         }
         labelWords.extend(self.words[sidx..<self.words.count])
-        if let curWord = self.curWord {
+        if let curWord = self.curWord where self.symbolIdx < 0 {
             labelWords.append(curWord)
         }
         var txt = String(" ").join(labelWords)
+        if self.symbolIdx >= 0 {
+            txt += InterfaceController.Symbols[self.symbolIdx]
+        }
         if count(txt) > 40 {
             self.updateLabel(sidx: sidx+1)
         } else {
@@ -84,22 +89,41 @@ class InterfaceController: WKInterfaceController {
         self.updateLabel()
     }
     
-    @IBAction func space() {
+    func addWord() {
         if let curWord = self.curWord {
             self.words.append(curWord)
             self.resetCurrent()
             self.availWords = [String]()
             self.typed = [Int]()
+        }
+    }
+    
+    @IBAction func space() {
+        if let curWord = self.curWord {
+            self.addWord()
         } else if var last = words.last {
-            last += "."
+            if self.symbolIdx < 0 {
+                last += "."
+            } else {
+                last += InterfaceController.Symbols[self.symbolIdx]
+                self.symbolIdx = -1
+            }
             self.words[self.words.count-1] = last
         }
+        self.updateLabel()
+    }
+    
+    @IBAction func symbol() {
+        self.addWord()
+        ++self.symbolIdx
+        self.symbolIdx = self.symbolIdx % InterfaceController.Symbols.count
         self.updateLabel()
     }
     
     func resetCurrent() {
         self.curWord = nil
         self.curWordIdx = 0
+        self.symbolIdx = -1
     }
     
     func type(index: Int) {

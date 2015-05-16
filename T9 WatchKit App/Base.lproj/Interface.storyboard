@@ -23,7 +23,11 @@
                                     <items>
                                         <group width="0.33300000000000002" height="1" alignment="center" verticalAlignment="center" layout="vertical" id="5QN-zo-vUe">
                                             <items>
-                                                <button width="1" height="0.25" alignment="center" verticalAlignment="center" title="!" id="skh-Tk-yYI"/>
+                                                <button width="1" height="0.25" alignment="center" verticalAlignment="center" title="!" id="skh-Tk-yYI">
+                                                    <connections>
+                                                        <action selector="symbol" destination="AgC-eL-Hgc" id="Jrx-75-BUQ"/>
+                                                    </connections>
+                                                </button>
                                                 <button width="1" height="0.25" alignment="center" verticalAlignment="center" title="GHI" id="8Ah-ct-54A">
                                                     <connections>
                                                         <action selector="ghi" destination="AgC-eL-Hgc" id="ww3-cm-7hO"/>
