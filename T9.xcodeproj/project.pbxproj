@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6C74F55F1BADDF7600AB33D5 /* T9 WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 6CC2B4361AFFA51300224C44 /* T9 WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		6C74F5621BADDF7600AB33D5 /* T9 WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 6CC2B4401AFFA51300224C44 /* T9 WatchKit App.app */; };
 		6CB2D2B91AFFB94D00AB0E60 /* words.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6CB2D2B81AFFB94D00AB0E60 /* words.txt */; };
 		6CB2D2BA1AFFB94D00AB0E60 /* words.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6CB2D2B81AFFB94D00AB0E60 /* words.txt */; };
 		6CB2D2BC1AFFBB0C00AB0E60 /* StreamReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB2D2BB1AFFBB0C00AB0E60 /* StreamReader.swift */; };
@@ -19,15 +21,27 @@
 		6CC2B4291AFFA4C900224C44 /* T9Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC2B4281AFFA4C900224C44 /* T9Tests.swift */; };
 		6CC2B43B1AFFA51300224C44 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC2B43A1AFFA51300224C44 /* InterfaceController.swift */; };
 		6CC2B43D1AFFA51300224C44 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6CC2B43C1AFFA51300224C44 /* Images.xcassets */; };
-		6CC2B4411AFFA51300224C44 /* T9 WatchKit App.app in Resources */ = {isa = PBXBuildFile; fileRef = 6CC2B4401AFFA51300224C44 /* T9 WatchKit App.app */; };
 		6CC2B4491AFFA51300224C44 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6CC2B4471AFFA51300224C44 /* Interface.storyboard */; };
 		6CC2B44B1AFFA51300224C44 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6CC2B44A1AFFA51300224C44 /* Images.xcassets */; };
-		6CC2B44E1AFFA51300224C44 /* T9 WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 6CC2B4361AFFA51300224C44 /* T9 WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		6CC2B4571AFFAA7D00224C44 /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC2B4561AFFAA7D00224C44 /* Node.swift */; };
 		6CC2B4581AFFAA7D00224C44 /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC2B4561AFFAA7D00224C44 /* Node.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		6C74F55D1BADDF7600AB33D5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6CC2B4051AFFA4C800224C44 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6CC2B4351AFFA51300224C44;
+			remoteInfo = "T9 WatchKit Extension";
+		};
+		6C74F5601BADDF7600AB33D5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6CC2B4051AFFA4C800224C44 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6CC2B43F1AFFA51300224C44;
+			remoteInfo = "T9 WatchKit App";
+		};
 		6CC2B4231AFFA4C900224C44 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 6CC2B4051AFFA4C800224C44 /* Project object */;
@@ -35,32 +49,29 @@
 			remoteGlobalIDString = 6CC2B40C1AFFA4C900224C44;
 			remoteInfo = T9;
 		};
-		6CC2B4421AFFA51300224C44 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 6CC2B4051AFFA4C800224C44 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 6CC2B43F1AFFA51300224C44;
-			remoteInfo = "T9 WatchKit App";
-		};
-		6CC2B44C1AFFA51300224C44 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 6CC2B4051AFFA4C800224C44 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 6CC2B4351AFFA51300224C44;
-			remoteInfo = "T9 WatchKit Extension";
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		6CC2B4551AFFA51300224C44 /* Embed App Extensions */ = {
+		6C74F5631BADDF7600AB33D5 /* Embed App Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				6CC2B44E1AFFA51300224C44 /* T9 WatchKit Extension.appex in Embed App Extensions */,
+				6C74F55F1BADDF7600AB33D5 /* T9 WatchKit Extension.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6C74F5641BADDF7600AB33D5 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				6C74F5621BADDF7600AB33D5 /* T9 WatchKit App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -231,12 +242,12 @@
 				6CC2B4091AFFA4C900224C44 /* Sources */,
 				6CC2B40A1AFFA4C900224C44 /* Frameworks */,
 				6CC2B40B1AFFA4C900224C44 /* Resources */,
-				6CC2B4551AFFA51300224C44 /* Embed App Extensions */,
+				6C74F5641BADDF7600AB33D5 /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				6CC2B44D1AFFA51300224C44 /* PBXTargetDependency */,
+				6C74F5611BADDF7600AB33D5 /* PBXTargetDependency */,
 			);
 			name = T9;
 			productName = T9;
@@ -272,27 +283,28 @@
 			buildRules = (
 			);
 			dependencies = (
-				6CC2B4431AFFA51300224C44 /* PBXTargetDependency */,
 			);
 			name = "T9 WatchKit Extension";
 			productName = "T9 WatchKit Extension";
 			productReference = 6CC2B4361AFFA51300224C44 /* T9 WatchKit Extension.appex */;
-			productType = "com.apple.product-type.watchkit-extension";
+			productType = "com.apple.product-type.watchkit2-extension";
 		};
 		6CC2B43F1AFFA51300224C44 /* T9 WatchKit App */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6CC2B44F1AFFA51300224C44 /* Build configuration list for PBXNativeTarget "T9 WatchKit App" */;
 			buildPhases = (
 				6CC2B43E1AFFA51300224C44 /* Resources */,
+				6C74F5631BADDF7600AB33D5 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				6C74F55E1BADDF7600AB33D5 /* PBXTargetDependency */,
 			);
 			name = "T9 WatchKit App";
 			productName = "T9 WatchKit App";
 			productReference = 6CC2B4401AFFA51300224C44 /* T9 WatchKit App.app */;
-			productType = "com.apple.product-type.application.watchapp";
+			productType = "com.apple.product-type.application.watchapp2";
 		};
 /* End PBXNativeTarget section */
 
@@ -302,7 +314,7 @@
 			attributes = {
 				LastSwiftMigration = 0700;
 				LastSwiftUpdateCheck = 0700;
-				LastUpgradeCheck = 0630;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Mike Barriault";
 				TargetAttributes = {
 					6CC2B40C1AFFA4C900224C44 = {
@@ -367,7 +379,6 @@
 			files = (
 				6CC2B43D1AFFA51300224C44 /* Images.xcassets in Resources */,
 				6CB2D2BA1AFFB94D00AB0E60 /* words.txt in Resources */,
-				6CC2B4411AFFA51300224C44 /* T9 WatchKit App.app in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -415,20 +426,20 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		6C74F55E1BADDF7600AB33D5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6CC2B4351AFFA51300224C44 /* T9 WatchKit Extension */;
+			targetProxy = 6C74F55D1BADDF7600AB33D5 /* PBXContainerItemProxy */;
+		};
+		6C74F5611BADDF7600AB33D5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6CC2B43F1AFFA51300224C44 /* T9 WatchKit App */;
+			targetProxy = 6C74F5601BADDF7600AB33D5 /* PBXContainerItemProxy */;
+		};
 		6CC2B4241AFFA4C900224C44 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 6CC2B40C1AFFA4C900224C44 /* T9 */;
 			targetProxy = 6CC2B4231AFFA4C900224C44 /* PBXContainerItemProxy */;
-		};
-		6CC2B4431AFFA51300224C44 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 6CC2B43F1AFFA51300224C44 /* T9 WatchKit App */;
-			targetProxy = 6CC2B4421AFFA51300224C44 /* PBXContainerItemProxy */;
-		};
-		6CC2B44D1AFFA51300224C44 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 6CC2B4351AFFA51300224C44 /* T9 WatchKit Extension */;
-			targetProxy = 6CC2B44C1AFFA51300224C44 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -481,6 +492,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -549,6 +561,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = T9/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "net.elemist.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -559,6 +572,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = T9/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "net.elemist.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -577,6 +591,7 @@
 				);
 				INFOPLIST_FILE = T9Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "net.elemist.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/T9.app/T9";
 			};
@@ -592,6 +607,7 @@
 				);
 				INFOPLIST_FILE = T9Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "net.elemist.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/T9.app/T9";
 			};
@@ -604,20 +620,22 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
 				IBSC_MODULE = T9_WatchKit_Extension;
 				INFOPLIST_FILE = "T9 WatchKit App/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.elemist.T9.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = 4;
-				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Debug;
 		};
@@ -628,15 +646,17 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				IBSC_MODULE = T9_WatchKit_Extension;
 				INFOPLIST_FILE = "T9 WatchKit App/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.elemist.T9.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
-				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Release;
 		};
@@ -649,8 +669,12 @@
 				);
 				INFOPLIST_FILE = "T9 WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.elemist.T9.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Debug;
 		};
@@ -659,8 +683,12 @@
 			buildSettings = {
 				INFOPLIST_FILE = "T9 WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.elemist.T9.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Release;
 		};
