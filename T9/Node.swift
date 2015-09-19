@@ -16,18 +16,19 @@ class Node: NSObject, NSCoding {
     
     class func MakeRootNode() -> Node {
         var node = Node(letters: 0)
-        let docDir = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as! String
-        let wordsDictFile = docDir.stringByAppendingPathComponent("words.plist")
+        let docDirStr = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0]
+        let docDir = NSURL(fileURLWithPath: docDirStr)
+        let wordsDictFile = docDir.URLByAppendingPathComponent("words.plist")
         let validation = NSFileManager.defaultManager()
-        if validation.fileExistsAtPath(wordsDictFile) {
-            node = NSKeyedUnarchiver.unarchiveObjectWithFile(wordsDictFile) as! Node
+        if validation.fileExistsAtPath(wordsDictFile.absoluteString) {
+            node = NSKeyedUnarchiver.unarchiveObjectWithFile(wordsDictFile.absoluteString) as! Node
         } else {
             let wordsfile = NSBundle.mainBundle().pathForResource("words", ofType: "txt")
             let reader = StreamReader(path: wordsfile!, delimiter: "\n")
             while let word = reader?.nextLine() {
                 node.addWord(word)
             }
-            NSKeyedArchiver.archiveRootObject(node, toFile: wordsDictFile)
+            NSKeyedArchiver.archiveRootObject(node, toFile: wordsDictFile.absoluteString)
         }
         return node
     }
@@ -38,7 +39,7 @@ class Node: NSObject, NSCoding {
         self.letters = letters
     }
     
-    required init(coder aDecoder: NSCoder) {
+    required init?(coder aDecoder: NSCoder) {
         super.init()
         self.words = aDecoder.decodeObjectForKey("words") as! [String]
         self.letters = aDecoder.decodeObjectForKey("letters") as! Int
@@ -60,12 +61,12 @@ class Node: NSObject, NSCoding {
     }
     
     func addWord(word: String) {
-        if count(word) == self.letters {
+        if word.characters.count == self.letters {
             self.words.append(word)
         }
         else {
             let lowerword = word.lowercaseString
-            let startindex = advance(lowerword.startIndex, self.letters)
+            let startindex = lowerword.startIndex.advancedBy(self.letters)
             let lastindex = startindex.successor()
             let keystr = lowerword.substringWithRange(Range<String.Index>(start: startindex, end: lastindex))
             var key: Int = 0

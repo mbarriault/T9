@@ -44,16 +44,16 @@ class InterfaceController: WKInterfaceController {
         if sidx > 0 {
             labelWords.append("...")
         }
-        labelWords.extend(self.words[sidx..<self.words.count])
+        labelWords.appendContentsOf(self.words[sidx..<self.words.count])
         if let curWord = self.curWord where self.symbolIdx < 0 {
             labelWords.append(curWord)
         }
-        var txt = String(" ").join(labelWords)
+        var txt = labelWords.joinWithSeparator(String(" "))
         if self.symbolIdx >= 0 {
             txt += InterfaceController.Symbols[self.symbolIdx]
         }
-        if count(txt) > 40 {
-            self.updateLabel(sidx: sidx+1)
+        if txt.characters.count > 40 {
+            self.updateLabel(sidx+1)
         } else {
             self.label.setText(txt)
         }
@@ -61,7 +61,9 @@ class InterfaceController: WKInterfaceController {
     }
 
     @IBAction func backspace() {
-        typed = Array(typed[0..<typed.count-1])
+        if typed.count > 0 {
+            typed = Array(typed[0..<typed.count-1])
+        }
         self.updateWord()
     }
     
@@ -96,7 +98,7 @@ class InterfaceController: WKInterfaceController {
     }
     
     @IBAction func space() {
-        if let curWord = self.curWord {
+        if let _ = self.curWord {
             self.addWord()
         } else if var last = words.last {
             var sym = "."
@@ -104,7 +106,7 @@ class InterfaceController: WKInterfaceController {
                 sym = InterfaceController.Symbols[self.symbolIdx]
                 self.symbolIdx = -1
             }
-            if contains([".", "!", "?"], sym) {
+            if [".", "!", "?"].contains(sym) {
                 self.capitalise = true
             } else {
                 self.capitalise = false
